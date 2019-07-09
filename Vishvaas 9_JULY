@@ -1,0 +1,847 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "9-JULY-2019",
+      "version": "0.3.2",
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "wBAQWIhf1VuM",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "LZ-eMNxt1o_g",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Day Objectives\n",
+        "# Pyhton Data Structures\n",
+        "    List\n",
+        "    Tuples\n",
+        "    Dictionaries\n",
+        " # Basic Program sets on Data Structures\n",
+        " # Advance Problem set\n",
+        " # Contact Application \n",
+        " # Data Structure:\n",
+        " To store Search and sort the data"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "By9t3Rxz23GY",
+        "colab_type": "text"
+      },
+      "source": [
+        ""
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "jqRQWFJy24Rw",
+        "colab_type": "text"
+      },
+      "source": [
+        "### Python Data Structures\n",
+        "### List\n",
+        "- It's one of common data structure support by Python, the list itemare seperated by common operator and enclosed in square brackets\n",
+        "# Example:\n",
+        "* list1 = [1,6,2,18,9]\n",
+        "* list2 = [\"Gitam\",10,12,15,5,\"Hyderabad\"]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GACtX73Q3fW4",
+        "colab_type": "code",
+        "outputId": "3955c337-1ca7-4c5f-8059-2755ec24ffff",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 141
+        }
+      },
+      "source": [
+        "lst = [1,8,16,9,2]\n",
+        "print(lst) \n",
+        "print(lst[0])\n",
+        "print(lst[1])\n",
+        "print(lst[-1])\n",
+        "print(lst[-2])\n",
+        "print(lst[1:])\n",
+        "print(lst[1:4])"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[1, 8, 16, 9, 2]\n",
+            "1\n",
+            "8\n",
+            "2\n",
+            "9\n",
+            "[8, 16, 9, 2]\n",
+            "[8, 16, 9]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "UXHVE8156Kmv",
+        "colab_type": "code",
+        "outputId": "c2391649-baec-4c6c-8e1d-ba6572e19af3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 52
+        }
+      },
+      "source": [
+        "# Update the list item values using index (Direct Referncing)\n",
+        "li = [\"Gitam\",\"Python\",1989,2002]\n",
+        "print(li)\n",
+        "li[2] = 2019\n",
+        "print(li)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['Gitam', 'Python', 1989, 2002]\n",
+            "['Gitam', 'Python', 2019, 2002]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "erA9M30M616w",
+        "colab_type": "code",
+        "outputId": "29855cd8-ee9d-4b3d-f0f8-a241cb3e1566",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 52
+        }
+      },
+      "source": [
+        "# delete the specific item in the list\n",
+        "print(li)\n",
+        "del li[2]\n",
+        "print(li)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['Gitam', 'Python', 2019, 2002]\n",
+            "['Gitam', 'Python', 2002]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "r_sM2d5W7sIB",
+        "colab_type": "code",
+        "outputId": "3ca63f87-1b49-4b9b-a326-849cd9c0a110",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 123
+        }
+      },
+      "source": [
+        "# Basic list Operator\n",
+        "lst1 = [1,9,6,18,1]\n",
+        "print(len(lst1))\n",
+        "print(lst * 2)\n",
+        "print(len(lst1))\n",
+        "print(9 in lst1)\n",
+        "print(15 in lst1)\n",
+        "# Access the list item using iteration\n",
+        "for x in range(len(lst1)):\n",
+        "    print(lst1[x],end=\" \")"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "5\n",
+            "[1, 8, 16, 9, 2, 1, 8, 16, 9, 2]\n",
+            "5\n",
+            "True\n",
+            "False\n",
+            "1 9 6 18 1 "
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ot3Cjfm1-mbI",
+        "colab_type": "code",
+        "outputId": "9cab9b51-59c8-4305-f6dd-bd9a16531ce3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 105
+        }
+      },
+      "source": [
+        "# Function of the list\n",
+        "lst1\n",
+        "print(min(lst1))\n",
+        "print(max(lst1))\n",
+        "print(sum(lst1))\n",
+        "print(sum(lst1)//len(lst1))\n",
+        "print(sum(lst1[1:2])/len(lst1[1:2]))\n",
+        "      "
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1\n",
+            "18\n",
+            "35\n",
+            "7\n",
+            "9.0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "tYC5OBBe-2c_",
+        "colab_type": "code",
+        "outputId": "8e8eb272-d843-419b-89a8-ec2b837d4ee6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Method of list Objects\n",
+        "lst1\n",
+        "lst1.append(24) \n",
+        "lst1\n",
+        "lst1.insert(2,56) \n",
+        "lst1\n",
+        "lst1.count(18) \n",
+        "lst1.index(56)\n",
+        "lst1.sort()\n",
+        "lst1\n",
+        "lst.pop()\n",
+        "lst1\n",
+        "lst1.pop(1)\n",
+        "lst2 = [123,34,45]\n",
+        "lst1.extend(lst2)\n",
+        "lst1.reverse()\n",
+        "lst1.remove(123)\n",
+        "lst1\n"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[45, 34, 123, 56, 56, 56, 56, 45, 34, 24, 24, 24, 24, 18, 9, 1]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "H-Fj1PgsHFPx",
+        "colab_type": "code",
+        "outputId": "1d20974c-5a0d-421a-94f6-3b01b0bb1617",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "li = [1,9,8,2,6,3]\n",
+        "print(li[-1:2:-2])"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[3, 2]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "cxtCppQHISG6",
+        "colab_type": "code",
+        "outputId": "e4e9fe8a-3b98-4bdc-b412-369272feab6e",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Function to find the second large item from the list\n",
+        "# Input  : [1,19,6,2,8,18,3]\n",
+        "# Output : 18\n",
+        "def secondLarge(li):\n",
+        "    li.sort()\n",
+        "    return li[-2]\n",
+        "def genericLarge(li,n):\n",
+        "    li.sort()\n",
+        "    return li[-n]\n",
+        "li = [1,19,6,2,8,18,3]\n",
+        "genericLarge(li,4)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bvFINlm8LXoi",
+        "colab_type": "code",
+        "outputId": "32c7b46d-2677-4e48-e81f-b5fb1c44db69",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Function to find the least item from the list\n",
+        "# Input  : [1,19,6,2,8,18,3]\n",
+        "# Output : 2\n",
+        "def secondLeast(li):\n",
+        "    li.sort()\n",
+        "    return li[1]\n",
+        "def genericLeast(li,n):\n",
+        "    li.sort()\n",
+        "    return li[n-1]\n",
+        "li = [1,19,6,2,8,18,3]\n",
+        "genericLeast(li,4)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "KVW82-QhVfbM",
+        "colab_type": "text"
+      },
+      "source": [
+        "### Linear Search\n",
+        "* Linear Search Algorithm can be applied on Duplicate and Unique list \n",
+        "   * Unique List : The all item of the list is appeared only one\n",
+        "   * Duplicate List : The item of the list "
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "sBl0TK8nWXTZ",
+        "colab_type": "code",
+        "outputId": "804ea677-1c3d-4fa2-e988-198c22f1f0ac",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Function to search the data in a list \n",
+        "# Search is found then return the index if not return -1\n",
+        "def linearSearch1(li,tarItem):\n",
+        "    for x in range(len(li)):\n",
+        "        if li[x] == tarItem:\n",
+        "            return x\n",
+        "    return -1\n",
+        "li = [1,19,6,2,8,18,3]\n",
+        "linearSearch1(li,225)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "-1"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ceZZ_nmMZIQE",
+        "colab_type": "code",
+        "outputId": "a0e5d9fa-a460-4612-d1aa-00b88dae55e7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Function \n",
+        "# Input  : [1,5,9,6,5,15,1,2,5],key=5 # Duplicate\n",
+        "# Output : 1 4 8\n",
+        "def linearSearch2(li,tarItem):\n",
+        "    for x in range(len(li)):\n",
+        "        if li[x] == tarItem:\n",
+        "            print(x,end=\" \")\n",
+        "    return\n",
+        "li = [1,5,9,6,5,15,1,2,5]\n",
+        "linearSearch2(li,5)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1 4 8 "
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "G9lPSn6gd4g5",
+        "colab_type": "code",
+        "outputId": "d0f15a32-42c8-456d-e075-01a254fd1bc7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Function \n",
+        "# Input  : List\n",
+        "# Output : Seq of characters\n",
+        "# Test case\n",
+        "# [1,5,9,6,5,15,1,2,5],tar=5 -- !! !!!!! !!!!!!!!!\n",
+        "def linearSearch3(li,tarItem):\n",
+        "    # Implement the logic\n",
+        "    for x in range(len(li)):\n",
+        "        if li[x] == tarItem:\n",
+        "            j = 0\n",
+        "            while j != x+1:\n",
+        "                print(\"!\",end=\" \")\n",
+        "                j = j + 1\n",
+        "            print(end=\" \")     \n",
+        "    return\n",
+        "li = [1,5,9,6,5,15,1,2,5,] \n",
+        "linearSearch3(li,5) # !! !!!!! !!!!!!!!!"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "! !  ! ! ! ! !  ! ! ! ! ! ! ! ! !  "
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "XFqi5KFHg184",
+        "colab_type": "code",
+        "outputId": "16ba9a2e-4609-4b0a-9692-22b5826380f6",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Function \n",
+        "# Input  : List \n",
+        "# Output : Formatted\n",
+        "# Test case :\n",
+        "# [12,2,45,9,18,15,36] -- 60\n",
+        "# A list item which is perfectly multiple of 3 and 5\n",
+        "def linearSearch4(li):\n",
+        "    sum = 0\n",
+        "    for x in range(len(li)):\n",
+        "        if li[x] % 3 == 0 and li[x] % 5 == 0:\n",
+        "            sum += li[x] # sum = sum + li[x]\n",
+        "    return sum\n",
+        "li = [12,2,45,9,18,15,36] \n",
+        "linearSearch4(li)\n"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "60"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 36
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Ihwh-EEojuYD",
+        "colab_type": "code",
+        "outputId": "f82b1d38-0e20-4975-b23b-a1bf0c9f96c2",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "# Function\n",
+        "# Input  : List\n",
+        "# Output : Formatted Output\n",
+        "# Test Care :\n",
+        "# [1,2,3,4,5] -- [1,3,8,15,5]\n",
+        "# [6,5,2,8,2] -- [6,12,40,4,2]\n",
+        "def linearSearch5(li):\n",
+        "    for x in range(len(li)):\n",
+        "        if x == 0 or x == len(li) - 1:\n",
+        "            print(li[x],end=\" \")\n",
+        "        else:\n",
+        "            print(li[x-1]*li[x+1],end=\" \")\n",
+        "    return       \n",
+        "li = [1,2,3,4,5]\n",
+        "linearSearch5(li)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1 3 8 15 5 "
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "l9l44cmA5Nan",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "09cfee18-8e37-441d-92cf-6f6c272d3448"
+      },
+      "source": [
+        "# Function \n",
+        "# Input : List\n",
+        "# Output : Formatted Output\n",
+        "# Test cases:\n",
+        "# [1,6,9,4,16,19,22] -- 1 9 19 22\n",
+        "def linearSearch6(li):\n",
+        "    # Implement the logic\n",
+        "    for x in range(len(li)):\n",
+        "        if x == 0 or x == len(li) - 1:\n",
+        "            print(li[x],end=\" \")\n",
+        "        elif li[x-1] % 2 == 0 and li[x+1] % 2 == 0:\n",
+        "            print(li[x],end=\" \")\n",
+        "    return\n",
+        "li = [1,6,9,4,16,19,22]\n",
+        "linearSearch6(li) \n"
+      ],
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "1 9 19 22 "
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7ahXGi_4-e2T",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Number to List\n",
+        " * Input as Number\n",
+        " * Expected output will be last"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "u7qqYmYh-r_Y",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "af7a2117-f202-4cd6-af89-f0daa3f3eb99"
+      },
+      "source": [
+        "# Function for coversion number from the list \n",
+        "# Input - number\n",
+        "# Output - List\n",
+        "# 14569 -- [1,4,5,6,9]\n",
+        "# 1990 -- [1,9,9,0]\n",
+        "def numberListConversion(n):\n",
+        "    li = []\n",
+        "    while n != 0:\n",
+        "        r = n % 10\n",
+        "        li.append(r)\n",
+        "        n = n // 10\n",
+        "    li.reverse()\n",
+        "    return li\n",
+        "numberListConversion(14569) "
+      ],
+      "execution_count": 50,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 4, 5, 6, 9]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 50
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "fpxu6dCpFakQ",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "81f4a94a-0127-458d-ab6e-2636ab85e1cd"
+      },
+      "source": [
+        "# Function to count the occrance of a character in a string\n",
+        "# \"Python Programming\",p-->2\n",
+        "# \"Python Programming\",m-->2\n",
+        "def countCharOccurances(s,c):\n",
+        "    cnt = 0\n",
+        "    for ch in s:\n",
+        "        if ch == c:\n",
+        "            cnt += 1\n",
+        "    return cnt\n",
+        "countCharOccurances(\"Python Programming\",'m')\n",
+        "  "
+      ],
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "2"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 60
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ygRjjUI_HI-K",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "8131e209-25b3-4339-c4b3-bc33806eeb23"
+      },
+      "source": [
+        "# Function to convert the string to list\n",
+        "# Test Case\n",
+        "# \"1 2 3 4 5 6\" -- [1,2,3,4,5,6]\n",
+        "def stringToListConversion(s):\n",
+        "    li = s.split()\n",
+        "    numberlist = []\n",
+        "    for i in li:\n",
+        "        numberlist.append(int(i))\n",
+        "    return numberlist\n",
+        "s = \"1 2 3 4 5 6\"\n",
+        "stringToListConversion(s) # [1,2,3,4,5,6]"
+      ],
+      "execution_count": 58,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 3, 4, 5, 6]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 58
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "PF85guGVIZo9",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Sorting Algorithms\n",
+        "# All the sorting algorithms makes the list into asecending order\n",
+        " * Bubble Sort\n",
+        " * Selection Sort\n",
+        " * Insertion Sort "
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "sBRfUa6uI5TL",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Bubble Sort:-\n",
+        " * This algorithm compares the adjacent elements,if the first element is greater\n",
+        " * Than second element then its required to swap the elements\n",
+        " "
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hDPErG87NJUA",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        },
+        "outputId": "7234cdc5-0d2c-4917-dc31-477425ee46fc"
+      },
+      "source": [
+        "# Function to represent the Bubble sort\n",
+        "def bubbleSort(li):\n",
+        "    for i in range(len(li)-1):\n",
+        "        for j in range(len(li)-1):\n",
+        "            if li[j] > li[j+1]:\n",
+        "                li[j],li[j+1] = li[j+1],li[j]\n",
+        "    return li\n",
+        "li = [19,1,25,6,18,3]\n",
+        "bubbleSort(li)"
+      ],
+      "execution_count": 59,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 3, 6, 18, 19, 25]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 59
+        }
+      ]
+    }
+  ]
+}
